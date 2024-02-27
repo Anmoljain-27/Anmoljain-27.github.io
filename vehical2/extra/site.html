@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Alert</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Emergency Alert</h1>
+    </header>
+    <main>
+        <section id="booking">
+            <h2>Book an Ambulance</h2>
+            <form id="booking-form">
+                <!-- Add necessary input fields for booking -->
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                <!-- Add more input fields as needed -->
+                <button type="submit">Book</button>
+            </form>
+        </section>
+        <section id="map">
+            <h2>Live Location</h2>
+            <div id="map-container"></div>
+        </section>
+        <section id="driver-help">
+            <h2>Driver Help</h2>
+            <button id="call-help">Call for Help</button>
+        </section>
+        <section id="feedback">
+            <h2>Customer Feedback</h2>
+            <form id="feedback-form">
+                <!-- Add necessary input fields for feedback -->
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

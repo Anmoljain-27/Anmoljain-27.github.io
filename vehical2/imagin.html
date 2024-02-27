@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-based Webpage</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .section {
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .section:nth-child(2) {
+            background-color: #000;
+            color: #0f0;
+            text-align: center;
+        }
+        .section:nth-child(3) {
+            background-color: #0f0;
+            color: #000;
+            text-align: center;
+        }
+        .section:nth-child(4) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .section:nth-child(4) .left-part {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .section:nth-child(4) .right-part {
+            width: 50%;
+            padding: 20px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .section:nth-child(4) .right-part input {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .section:nth-child(4) .right-part input::placeholder {
+            color: #fff;
+        }
+        .section:nth-child(4) .right-part input:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            outline: none;
+        }
+        .section:nth-child(4) .left-part img {
+            width: 80%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+        .section:nth-child(4) .left-part img:hover {
+            transform: scale(1.05);
+        }
+        .section:nth-child(4) .left-part h2 {
+            margin-top: 20px;
+            color: #000;
+        }
+        .section:nth-child(4) .left-part .change-image {
+            margin-top: 20px;
+        }
+        .section:nth-child(4) .left-part .change-image button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .section:nth-child(4) .left-part .change-image button:hover {
+            background-color: #0f0;
+        }
+        .section:nth-child(4) .left-part .change-image button:active {
+            background-color: #f00;
+        }
+        .section:nth-child(4) .left-part .change-image h2 {
+            margin: 0;
+            margin-left: 10px;
+            font-size: 16px;
+        }
+        .section:nth-child(4) .left-part .change-image button:disabled {
+            background-color: #ccc;
+            color: #fff;
+            cursor: not-allowed;
+        }
+        .section:nth-child(4) .left-part .change-image button:disabled:hover {
+            background-color: #ccc;
+        }
+        .section:nth-child(4) .left-part .change-image button:disabled:active {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="section">
+            <h1>Welcome to AI-based Webpage</h1>
+        </div>
+        <div class="section">
+            <h2>This section has a dark background</h2>
+        </div>
+        <div class="section">
+            <h2>This section has a light background</h2>
+        </div>
+        <div class="section">
+            <div class="left-part">
+                <img src="https://via.placeholder.com/400" alt="Image">
+                <div class="change-image">
+                    <button id="changeBtn">Change Image</button>
+                    <h2>Click to change</h2>
+                </div>
+            </div>
+            <div class="right-part">
+                <input type="text" placeholder="Enter your name">
+                <input type="email" placeholder="Enter your email">
+                <input type="password" placeholder="Enter your password">
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('changeBtn').addEventListener('click', function() {
+            var image = document.querySelector('.left-part img');
+            image.src = 'https://via.placeholder.com/400/ff0000/ffffff';
+        });
+    </script>
+</body>
+</html>
